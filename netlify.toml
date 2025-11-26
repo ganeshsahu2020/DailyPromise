@@ -1,0 +1,20 @@
+[build]
+  # For production deploys: build the Vite app in the repo root
+  command = "npm run build"
+  publish = "dist"
+  # Your Netlify Functions live in this folder at repo root
+  functions = "functions"
+
+[dev]
+  # Local dev: Netlify will run `npm run dev` and proxy functions
+  command = "npm run dev"
+  targetPort = 5151     # Vite dev server port
+  port = 8888           # Netlify dev port (what you open in the browser)
+  autoLaunch = false
+  functions = "functions"
+
+# Single-page app fallback for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
