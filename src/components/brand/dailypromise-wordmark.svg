@@ -1,0 +1,51 @@
+<!-- DailyPromise Wordmark — icon + name + tagline, auto-contrasted -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" role="img" aria-label="DailyPromise">
+  <defs>
+    <linearGradient id="dpTextGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <style>
+      .icon-heart { fill: url(#dpTextGrad); stroke: #0b1a2b; stroke-width: 1.25; }
+      .icon-check { fill: none; stroke: #0b1a2b; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+
+      .brand-daily { fill: url(#dpTextGrad); }
+      .brand-promise { fill: #8DE1D1; } /* soft aqua-teal for contrast */
+      .tagline { fill: #334155; }
+
+      /* Dark scheme overrides */
+      @media (prefers-color-scheme: dark) {
+        .icon-heart { stroke: rgba(255,255,255,0.9); }
+        .icon-check { stroke: #ffffff; }
+        .brand-promise { fill: #A7F3D0; }
+        .tagline { fill: rgba(255,255,255,0.75); }
+      }
+    </style>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(12,16)">
+    <path class="icon-heart"
+      d="M48 112 C30 98 12 84 12 66 c0-10 8-18 18-18 7.3 0 13.1 4.1 16 10 2.9-5.9 8.7-10 16-10 10 0 18 8 18 18 0 18-18 32-32 46-0.4 0.4-1.1 0.4-1.6 0z"
+    />
+    <path class="icon-check" d="M34 73 L44 83 L64 63"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(140,68)">
+    <!-- "Daily" -->
+    <text class="brand-daily" x="0" y="0" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="48" font-weight="800" letter-spacing="0.2">
+      Daily
+    </text>
+    <!-- "Promise" -->
+    <text class="brand-promise" x="140" y="0" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="48" font-weight="800" letter-spacing="0.2">
+      Promise
+    </text>
+
+    <!-- Tagline -->
+    <text class="tagline" x="2" y="34" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="16" font-weight="600" letter-spacing="0.3">
+      Promise. Practice. Prosper.
+    </text>
+  </g>
+</svg>

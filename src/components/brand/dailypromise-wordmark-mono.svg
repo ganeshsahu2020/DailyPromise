@@ -1,0 +1,22 @@
+<!-- Mono Wordmark (inherits text color; perfect for gradient headers with white text) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 140" role="img" aria-label="DailyPromise (mono)">
+  <defs>
+    <style>
+      .mono { fill: currentColor; }
+      .check { fill: none; stroke: currentColor; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .tag { fill: currentColor; opacity: 0.75; }
+    </style>
+  </defs>
+
+  <!-- Simple heart outline to keep mono crisp -->
+  <path class="mono" d="M52 110 C34 96 16 82 16 64 c0-10 8-18 18-18 7.3 0 13.1 4.1 16 10 2.9-5.9 8.7-10 16-10 10 0 18 8 18 18 0 18-18 32-32 46-0.4 0.4-1.1 0.4-1.6 0z"/>
+  <path class="check" d="M38 71 L48 81 L68 61"/>
+
+  <g transform="translate(140,66)">
+    <text class="mono" x="0" y="0" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="48" font-weight="800" letter-spacing="0.2">Daily</text>
+    <text class="mono" x="140" y="0" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="48" font-weight="800" letter-spacing="0.2">Promise</text>
+    <text class="tag" x="2" y="34" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="16" font-weight="600" letter-spacing="0.3">
+      Promise. Practice. Prosper.
+    </text>
+  </g>
+</svg>

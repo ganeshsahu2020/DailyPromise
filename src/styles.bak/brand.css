@@ -1,0 +1,31 @@
+/* Brand-level overrides and decorative gradients */
+
+/* Background luxury gradient with floating accents */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(800px 400px at 10% 10%, rgba(167,139,250,.08), transparent 40%),
+                    radial-gradient(900px 450px at 90% 20%, rgba(255,111,97,.06), transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+/* Floating glass decorations */
+.floating-decor {
+  position: absolute;
+  width: 220px;
+  height: 120px;
+  border-radius: 1rem;
+  opacity: 0.06;
+  background: linear-gradient(90deg, rgba(240,200,120,.12), rgba(255,111,97,.08));
+  filter: blur(18px);
+  transform: translateY(-10px);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Decorative icon gradient for SVGs and icons */
+.icon-gradient-fill {
+  fill: url(#iconGradient);
+}

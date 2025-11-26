@@ -1,0 +1,84 @@
+/* ----- Theme overrides + contract (high-contrast) ----- */
+
+/* Base defaults (kept for safety; dark is forced via class + data-theme) */
+:root {
+  --app-bg: #f6fafc;
+  --app-fg: #0b1a28;
+
+  --surface-1-bg: #ffffff;
+  --surface-1-fg: #0b1a28;
+
+  --input-bg: #ffffff;
+  --input-fg: #0b1a28;
+
+  --border-color: rgba(0,0,0,.12);
+  --muted-fg: rgba(11,26,40,.62);
+
+  --accent-emerald: #00a572;
+  --accent-coral: #ff6f61;
+}
+
+/* Dark overrides (active because we force .dark and data-theme="dark") */
+:root[data-theme="dark"], .dark {
+  --app-bg: #0b1a28;
+  --app-fg: #e8f0f7;
+
+  --surface-1-bg: rgba(255,255,255,.06);
+  --surface-1-fg: #e8f0f7;
+
+  --input-bg: rgba(255,255,255,.10);
+  --input-fg: #e8f0f7;
+
+  --border-color: rgba(255,255,255,.14);
+  --muted-fg: rgba(232,240,247,.72);
+}
+
+/* Surfaces */
+.card,
+.glass,
+[data-surface="1"],
+.shadow-card,
+.panel,
+section.card,
+div.card {
+  background: var(--surface-1-bg) !important;
+  color: var(--surface-1-fg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Keep “glass” but ensure readable text */
+.glass {
+  backdrop-filter: blur(10px);
+  color: var(--surface-1-fg) !important;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  background: var(--input-bg) !important;
+  color: var(--input-fg) !important;
+  border: 1px solid var(--border-color);
+  caret-color: var(--input-fg);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted-fg);
+  opacity: 1;
+}
+
+/* Links */
+a { color: var(--accent-coral); }
+a:hover, a:focus { color: var(--accent-emerald); }
+
+/* Focus ring consistent */
+:where(a,button,input,select,textarea):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent-emerald) 40%, transparent);
+  border-radius: .6rem;
+}
+
+/* Tables */
+table { color: var(--surface-1-fg); }
+thead th { border-bottom: 1px solid var(--border-color); }
+tbody td { border-top: 1px solid var(--border-color); }
